@@ -1,0 +1,259 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background: #f4f6fa;
+    color: #202b3c;
+}
+
+.container {
+    width: 100%;
+    max-width: 1600px;
+    margin: auto;
+    padding: 30px;
+}
+
+/* HEADER */
+
+header {
+    background: linear-gradient(120deg, #102b50, #1d4e89);
+    color: white;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(20, 45, 80, 0.12);
+}
+
+header h1 {
+    font-size: 27px;
+    font-weight: 800;
+    margin-bottom: 9px;
+}
+
+header p {
+    color: #d3e2f5;
+    font-size: 14px;
+}
+
+/* DASHBOARD */
+
+.dashboard {
+    margin-top: 30px;
+}
+
+.dashboard h2,
+.form-section h2,
+.table-section h2 {
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #172b4d;
+}
+
+.dashboard-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    width: 260px;
+    border: 1px solid #e6eaf0;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.03);
+}
+
+.dashboard-card h3 {
+    font-size: 14px;
+    color: #718096;
+    font-weight: 500;
+}
+
+.dashboard-card h1 {
+    font-size: 38px;
+    margin-top: 12px;
+    color: #1d4e89;
+}
+
+/* FORM SECTION */
+
+.form-section,
+.table-section {
+    background: white;
+    padding: 27px;
+    margin-top: 25px;
+    border-radius: 13px;
+    border: 1px solid #e8edf3;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.025);
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #dce3ec;
+    border-radius: 8px;
+    font-size: 14px;
+    background: #fff;
+    color: #27364b;
+    outline: none;
+    transition: 0.2s;
+}
+
+input:focus,
+select:focus {
+    border-color: #2878d0;
+    box-shadow: 0 0 0 3px rgba(40, 120, 208, 0.1);
+}
+
+input::placeholder {
+    color: #9aa5b4;
+}
+
+/* BUTTONS */
+
+button {
+    padding: 12px 18px;
+    background: #1d4e89;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #2868ad;
+    transform: translateY(-1px);
+}
+
+form button[type="submit"] {
+    background: #1d4e89;
+}
+
+.cancel {
+    background: #718096;
+}
+
+/* MESSAGE */
+
+.message {
+    margin-top: 17px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    background: #eaf7ef;
+    color: #21834c;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* SEARCH */
+
+.search {
+    max-width: 420px;
+    margin-bottom: 20px;
+    background: #f8fafc;
+}
+
+/* TABLE */
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid #e5eaf0;
+    border-radius: 9px;
+}
+
+table {
+    width: 100%;
+    min-width: 1050px;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #173b70;
+    color: white;
+}
+
+th {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    padding: 16px 13px;
+    text-align: left;
+}
+
+td {
+    padding: 15px 13px;
+    border-bottom: 1px solid #edf0f4;
+    font-size: 13px;
+    color: #475569;
+}
+
+tbody tr:hover {
+    background: #f5f8fc;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ACTION BUTTONS */
+
+.edit {
+    background: #e9a12a;
+    color: white;
+    margin-right: 6px;
+}
+
+.edit:hover {
+    background: #cb8514;
+}
+
+.delete {
+    background: #dc4b4b;
+}
+
+.delete:hover {
+    background: #bd3030;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    header {
+        padding: 22px;
+    }
+
+    header h1 {
+        font-size: 21px;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-card {
+        width: 100%;
+    }
+
+    .form-section,
+    .table-section {
+        padding: 18px;
+    }
+}
